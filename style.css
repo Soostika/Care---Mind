@@ -1,0 +1,428 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #f6f7f9;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: transform 0.3s ease;
+}
+
+h2:hover {
+  transform: scale(1.1);
+  color: #77aad9;
+}
+
+/* Mission Section */
+#mission {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 26rem;
+  padding: 1.25rem;
+  text-align: center;
+  margin-top: 2.5rem;
+  transition: background-color 0.5s ease;
+}
+
+#mission:hover {
+  background-color: #f1f1f1;
+}
+
+.mission-content {
+  flex: 1;
+  padding-right: 1.25rem;
+  color: #000;
+  text-align: right;
+  margin-left: 4rem;
+  transition: transform 0.3s ease;
+}
+
+.mission-content:hover {
+  transform: translateX(10px);
+}
+
+.mission-image {
+  flex-shrink: 0;
+  max-height: 100%;
+  width: auto;
+  margin-left: 1.25rem;
+  margin-right: 4rem;
+  transition: transform 0.3s ease;
+}
+
+.mission-image:hover {
+  transform: scale(1.05);
+}
+
+.mission-content p.text {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+/* Text animation for Mission section */
+.animate-character {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #77aad9 0%,
+    #f6acb0 50%,
+    #ffffff 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  display: inline-block;
+  font-size: 3rem;
+  font-family: "Merriweather", serif;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Mental Health Issues Section */
+.issues {
+  margin-top: 5rem;
+}
+
+.header {
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.issues h1 {
+  margin-left: 1.25rem;
+}
+
+.issues .view-all {
+  margin-right: 1.25rem;
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+}
+
+.issues-container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.issue {
+  width: 14rem;
+  height: 16rem;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  background-color: #dee5ed;
+  box-shadow: inset 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.issue:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.issue img {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 3rem;
+}
+
+.issue-button {
+  text-decoration: none;
+  width: 10rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: 3rem;
+  background-color: #77aad9;
+  color: #fff;
+  border: none;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  line-height: normal;
+}
+
+.issue-button:hover {
+  background-color: #5c90b8;
+  transform: translateY(-2px);
+}
+
+/* Blogs Section */
+.blogs-background {
+  margin-top: 5rem;
+  width: 100%;
+  background-color: #dee5ed;
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.blogs-background:hover {
+  background-color: #f1f1f1;
+}
+
+.blogs-title {
+  margin-bottom: 2rem;
+}
+
+.blogs-container {
+  display: flex;
+  overflow: hidden;
+  gap: 1.25rem;
+  width: 80%;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+.blog {
+  flex: 0 0 calc(25% - 20px);
+  width: 100%;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.15);
+}
+
+.blog img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog img:hover {
+  transform: scale(1.05);
+}
+
+.blog-content {
+  padding: 1.25rem;
+  text-align: left;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.blog-topic {
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #000;
+}
+
+.blog-description {
+  font-size: 0.95rem;
+  color: #000;
+  margin-bottom: 0.75rem;
+  flex-grow: 1;
+  overflow: hidden;
+  max-height: 6rem;
+}
+
+.blog-button {
+  padding: 0.5rem;
+  border: none;
+  background-color: #77aad9;
+  color: #fff;
+  border-radius: 3rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  height: 2.5rem;
+  margin-top: auto;
+  text-decoration: none;
+}
+
+.blog-button:hover {
+  background-color: #5c90b8;
+}
+
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.35rem; /* Reduced padding to make the button smaller */
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+}
+
+.arrow-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.arrow-btn svg {
+  width: 24px; /* Reduced the width of the arrow icon */
+  height: 24px; /* Reduced the height of the arrow icon */
+}
+
+/* View All Section */
+.view-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.view-all-link:hover {
+  background-color: #ddd;
+  color: #77aad9;
+}
+
+/* About Us Section */
+.about-us {
+  text-align: center;
+  padding: 2rem;
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.about-us h2:hover {
+  color: #77aad9;
+}
+
+.about-us p {
+  color: #666;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+/* Personal Stories Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f5fc;
+}
+
+.personal-stories {
+  text-align: center;
+  padding: 2em;
+}
+
+.personal-stories-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.story-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.story-date {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.story-topic {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.read-more-button {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #77aad9;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.page-button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  color: #77aad9;
+  background-color: transparent;
+  border: 1px solid #77aad9;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-button.active,
+.page-button:hover {
+  background-color: #77aad9;
+  color: #fff;
+}

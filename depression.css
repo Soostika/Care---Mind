@@ -1,0 +1,324 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  background: #f6f7f9;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+}
+
+/* Sub NavBar Section */
+.sub-nav {
+  position: fixed;
+  top: 1rem;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  background-color: #dee5ed;
+  z-index: 100;
+}
+
+.sub-nav-left {
+  margin-left: 5rem;
+}
+
+.sub-nav-right {
+  margin-left: auto;
+  display: flex;
+  gap: 2rem;
+}
+
+.sub-nav-left,
+.sub-nav-right a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 1.5rem;
+  background-color: #000;
+  margin: 0 2rem;
+}
+
+.sub-nav-right a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: url("./resources/images/depression-hero-image.jpg") no-repeat
+    center/cover;
+  height: 40rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.hero h1 {
+  margin-top: 8rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* Resource Section */
+.resource-section {
+  position: relative;
+  margin-top: -15rem;
+  height: 35rem;
+  margin-bottom: 6rem;
+}
+
+.background-rectangle {
+  position: absolute;
+  width: 60rem;
+  height: 30rem;
+  background-color: #f6acb0;
+  border-radius: 4rem 0 0 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content-rectangle {
+  position: absolute;
+  width: 60rem;
+  height: 30rem;
+  background-color: #adcce9;
+  border-radius: 0 0 4rem 0;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.content-rectangle h2 {
+  color: #000;
+  font-size: 1.8rem;
+  margin-bottom: 6rem;
+}
+
+.resource-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  border-radius: 1rem;
+  width: 20rem;
+  padding: 1.5rem;
+  text-align: center;
+  flex: 1 1 250px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-icon {
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.card-content a {
+  text-decoration: none;
+  color: #555;
+  font-size: 1rem;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+/* Find Therapist Section */
+.find-therapist-container {
+  height: 16rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #fff;
+  margin-bottom: 6rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.find-therapist a {
+  font-family: "Merriweather", serif;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #000;
+}
+
+.find-therapist a:hover {
+  color: #77aad9;
+}
+
+.find-therapist img {
+  height: 5rem;
+}
+
+.right-arrow {
+  transform: rotateY(180deg);
+}
+
+/* Content Section */
+.content-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.content1,
+.content2 {
+  margin-bottom: 4rem;
+}
+
+.content1 h2,
+.content2 h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.content2-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5rem 2rem;
+}
+
+.content2-header h2 {
+  margin: 0;
+}
+
+.content2-header .view-all {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.content2-header .view-all:hover {
+  text-decoration: underline;
+}
+
+.content-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.content-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content-card:hover {
+  transform: translateY(-10px);
+}
+
+.content-card img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.card-text h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card-text a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.card-text a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .sub-nav-left,
+  .sub-nav-right {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .sub-nav {
+    margin-top: 0;
+    padding: 0 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-top: 5rem;
+  }
+
+  /* Adjust Resource Section for mobile */
+  .resource-section {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .resource-cards,
+  .content-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .content-card {
+    width: 90%;
+    max-width: 20rem; /* Adjust card width on small screens */
+  }
+
+  .hero {
+    height: 300px; /* Adjust for smaller screens */
+  }
+}
